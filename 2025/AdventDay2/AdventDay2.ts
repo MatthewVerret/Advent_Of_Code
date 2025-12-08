@@ -5,13 +5,10 @@ async function adventDay2_part1(fileTxt: string): Promise<number> {
     let resultsInvalidIDs: number = 0;
 
     for (let i = 0; i < lines.length; i += 2) {
-        const start = Number(lines[i]);
-        const end = Number(lines[i + 1]);
-
-        for (let id = start; id <= end; ++id) {
+        for (let id = Number(lines[i]); id <= Number(lines[i + 1]); ++id) {
             const s = id.toString();
 
-            if (s.length % 2 !== 0) continue;
+            if (s.length % 2 !== 0) continue
 
             const mid = s.length / 2;
             if (s.slice(0, mid) === s.slice(mid)) {
@@ -28,17 +25,14 @@ async function adventDay2_part2(fileTxt: string): Promise<number> {
     let resultsInvalidIDs: number = 0;
 
     for (let i = 0; i < lines.length; i += 2) {
-        const start = Number(lines[i]);
-        const end = Number(lines[i + 1]);
-
-        for (let id = start; id <= end; ++id) {
+        for (let id = Number(lines[i]); id <= Number(lines[i + 1]); ++id) {
             const s = id.toString();
             const len = s.length;
 
             let isInvalid = false;
 
             for (let blockLen = 1; blockLen <= Math.floor(len / 2); blockLen++) {
-                if (len % blockLen !== 0) continue; // must divide evenly
+                if (len % blockLen !== 0) continue;
 
                 const pattern = s.slice(0, blockLen);
                 let ok = true;
@@ -56,9 +50,7 @@ async function adventDay2_part2(fileTxt: string): Promise<number> {
                 }
             }
 
-            if (isInvalid) {
-                resultsInvalidIDs += id;
-            }
+            if (isInvalid) resultsInvalidIDs += id;
         }
     }
 

@@ -2,7 +2,8 @@
   "name": "advent_of_code",
   "version": "1.0.0",
   "scripts": {
-    "startFirst": "ts-node 2025/AdventDay1/adventDay1.ts",
+    "startDay1": "ts-node 2025/AdventDay1/adventDay1.ts",
+    "startDay2": "ts-node 2025/AdventDay2/adventDay2.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

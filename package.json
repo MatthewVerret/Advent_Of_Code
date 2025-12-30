@@ -5,6 +5,7 @@
     "startDay1": "ts-node 2025/AdventDay1/adventDay1.ts",
     "startDay2": "ts-node 2025/AdventDay2/adventDay2.ts",
     "startDay3": "ts-node 2025/AdventDay3/adventDay3.ts",
+    "startDay4": "ts-node 2025/AdventDay4/adventDay4.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
